@@ -10,7 +10,8 @@
 
 		</ul>
 		<ul class="nav navbar-right">
-		<li><a href="/logout" class="nav navbar-brand">Logout </a></li>
+		<label>Welcome..${name}..!!</label>
+		<li><a href="/logout" class="nav navbar-brand"><span style="font-size: 15px">Logout</span></a></li>
 		</ul>
 		
 	</div>

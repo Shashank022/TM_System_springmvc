@@ -1,5 +1,9 @@
 package com.springmvc.login;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.jca.context.SpringContextResourceAdapter;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,7 +17,8 @@ public class WelcomeController {
 	
 @RequestMapping(value = "/", method = RequestMethod.GET)
 	public String showLoginPage(ModelMap model) {
-		model.put("name", "in28Minutes");
+	String auth = SecurityContextHolder.getContext().getAuthentication().getName();
+		model.put("name", auth);
 		return "welcome";
 	}
 

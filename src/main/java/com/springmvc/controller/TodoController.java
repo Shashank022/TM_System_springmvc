@@ -28,10 +28,7 @@ public class TodoController {
 
 	@Autowired
 	TodoService service;
-	
-	@Autowired
-	DataSource dataSource;
-	
+
 	@Autowired
 	JdbcTemplate jdbcTemplate;
 	
