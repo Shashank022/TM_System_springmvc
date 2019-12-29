@@ -7,6 +7,7 @@
 			<li class="active"><a href="/">Home</a></li>
 			<li><a href="/list-todos">Todos</a></li>
 			<li><a href="/eventlist">Events</a></li>
+			<li><a href="/userlist">Users</a></li>
 
 		</ul>
 		<ul class="nav navbar-right">

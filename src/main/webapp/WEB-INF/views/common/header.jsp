@@ -8,5 +8,5 @@
 <link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css"
 	    		rel="stylesheet">
 </head>
-
+<script src="./libs/jquery/1.10.1/jquery.min.js"></script>
 <body>

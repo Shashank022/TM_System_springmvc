@@ -2,11 +2,9 @@
 <%@ include file= "common/navigation.jsp"%>
 
 <div class="container">
-Welcome ${name}
 
-<div class="container">
 		<table class="table table-striped">
-			<caption>Your Events are</caption>
+			<caption>Your List of Events are</caption>
 
 			<thead>
 				<tr>
