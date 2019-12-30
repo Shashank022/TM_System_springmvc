@@ -4,24 +4,29 @@ package com.springmvc.daoImpl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import com.springmvc.dao.EventDao;
 import com.springmvc.model.Event;
 import com.springmvc.rowmapper.EventMapper;
 
-@Component
+@Repository
 public class EventDaoImpl implements EventDao {
 
 	@Autowired
 	JdbcTemplate jdbcTemplate;
+	
+	@Autowired
+	private ApplicationContext context;
 
 	@Override
 	public List<Event> getallEventsList() {
 		
 		String SQL = "SELECT * FROM TMSystem.events";
-		List <Event> events = jdbcTemplate.query(SQL, new EventMapper());
+		List<Event> events = jdbcTemplate.query(SQL, new EventMapper());
 
 		 for (Event event : events) {
 			System.out.println(event.getCreated_by());

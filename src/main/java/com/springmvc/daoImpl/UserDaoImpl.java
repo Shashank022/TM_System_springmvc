@@ -4,29 +4,39 @@ package com.springmvc.daoImpl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import com.springmvc.dao.UserDao;
+import com.springmvc.model.Role;
 import com.springmvc.model.User;
 import com.springmvc.rowmapper.UserMapper;
 
-@Component
+@Repository
 public class UserDaoImpl implements UserDao {
 
 	@Autowired
 	JdbcTemplate jdbcTemplate;
 
+	
+	@Autowired
+	private ApplicationContext context;
+	
 	@Override
 	public List<User> getallUserList() {
 		
 		String SQL = "SELECT * FROM TMSystem.users";
 		List<User> users = jdbcTemplate.query(SQL,new UserMapper());
-				
-		 for (User user : users) {
-			System.out.println(user.getUser_role());
-			
-		}
+		
+		System.out.println("********************************************************************************");
+			 for (User user : users) {
+				System.out.println(user.getUser_role());
+			}
+		 
+		 System.out.println("********************************************************************************");
+		 
 		return users;
 	}
 
