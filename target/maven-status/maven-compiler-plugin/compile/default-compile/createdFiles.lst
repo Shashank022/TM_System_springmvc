@@ -1,5 +1,5 @@
 com/springmvc/controller/TaskController.class
+com/springmvc/model/Todo.class
 com/springmvc/controller/TeamController.class
 com/springmvc/service/TodoService.class
 com/springmvc/controller/TodoController.class
-com/springmvc/model/Todo.class
