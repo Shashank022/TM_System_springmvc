@@ -10,4 +10,5 @@ public interface EventDao {
 	public void saveEvent(Event event);
 	public Event getEventDetails(int id);
 	public void updateEvent(Event event);
+	public void deleteEvent(int id);
 }

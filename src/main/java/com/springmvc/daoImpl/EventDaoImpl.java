@@ -6,7 +6,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 import com.springmvc.dao.EventDao;
@@ -55,5 +54,29 @@ public class EventDaoImpl implements EventDao {
 		jdbcTemplate.update(updateSql, new Object[]{event, event.getId()});
 		
 	}
+
+	@Override
+	public void deleteEvent(int id) {
+		System.out.println("Deleting th information  with the ID :" + id);
+		jdbcTemplate.update("delete from TMSystem.events where id=?", new Object[] { id });
+	}
+	
+	
+
+//	public int deleteById(int id) {
+//		return jdbcTemplate.update("delete from person where id=?", new Object[] { id });
+//	}
+//
+//	public int insert(Person person) {
+//		return jdbcTemplate.update("insert into person (id, name, location, birth_date) " + "values(?,  ?, ?, ?)",
+//				new Object[] { person.getId(), person.getName(), person.getLocation(),
+//						new Timestamp(person.getBirthDate().getTime()) });
+//	}
+//
+//	public int update(Person person) {
+//		return jdbcTemplate.update("update person " + " set name = ?, location = ?, birth_date = ? " + " where id = ?",
+//				new Object[] { person.getName(), person.getLocation(), new Timestamp(person.getBirthDate().getTime()),
+//						person.getId() });
+//	}
 
 }
