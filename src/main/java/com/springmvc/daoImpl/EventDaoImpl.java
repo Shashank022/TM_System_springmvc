@@ -42,4 +42,18 @@ public class EventDaoImpl implements EventDao {
 		System.out.println("I have reached here");		
 	}
 
+	@Override
+		public Event getEventDetails(int id) {
+			 String sql = "SELECT * FROM TMSystem.events WHERE ID = ?";
+		 Event event = jdbcTemplate.queryForObject(sql, new Object[] { id }, new EventMapper());
+		 return event;
+	}
+
+	@Override
+	public void updateEvent(Event event) {
+		String updateSql = "update TMSystem.events set event= ? where id = ?";
+		jdbcTemplate.update(updateSql, new Object[]{event, event.getId()});
+		
+	}
+
 }

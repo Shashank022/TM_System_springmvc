@@ -8,6 +8,7 @@
 
 			<thead>
 				<tr>
+					<th>Event Name</th>
 					<th>Created By</th>
 					<th>Created Date</th>
 					<th>Updated By</th>
@@ -17,11 +18,12 @@
 			<tbody>
 				<c:forEach items="${events}" var="event">
 					<tr>
+						<td>${event.event_name}</td>
 						<td>${event.created_by}</td>
 						<td><fmt:formatDate pattern="dd/MM/yyyy" value="${event.created_date}"/></td>
-						<td>${event.created_date}</td>
-						<td><a href="/update-todo?id=${event.id}" class="btn btn-success">Update</a></td>
-						<td><a href="/delete?id=${event.id}" class="btn btn-danger">Delete</a></td>
+						<td>${event.updated_by}</td>
+						<td><a href="/update-event?id=${event.id}" class="btn btn-success">Update</a></td>
+						<td><a href="/delete-event?id=${event.id}" class="btn btn-danger">Delete</a></td>
 					</tr>
 				</c:forEach>
 			</tbody>

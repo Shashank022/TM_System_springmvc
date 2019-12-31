@@ -19,7 +19,7 @@
 	</fieldset>
 	
 	<fieldset class="form-group">
-		<form:label path="created_date">Target Date:</form:label>
+		<form:label path="created_date">Created Date:</form:label>
 		<form:input path="created_date" type="text" class="form-control" required="required"/>
 		<form:errors path="created_date" cssClass="text-warning"/> 
 	</fieldset>
@@ -31,7 +31,7 @@
 	</fieldset>
 		<fieldset class="form-group">
 		<form:label path="team_id">Team ID:</form:label>
-		<form:input path="team_id" type="text" class="form-control" required="required"/>
+		<form:input path="team_id" type="number" class="form-control" required="required"/>
 		<form:errors path="team_id" cssClass="text-warning"/> 
 	</fieldset>
 		<input class="btn btn-success" type="submit" value="Submit"/>
