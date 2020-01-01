@@ -23,7 +23,7 @@ Welcome ${name} all Users are
 						<td>${user.user_name}</td>
 						<td>${user.user_id}</td>
 						<td>${user.user_role}</td>
-						<td><a href="/update-todo?id=${user.id}" class="btn btn-success">Update</a></td>
+						<td><a href="/update-user?id=${user.id}" class="btn btn-success">Update</a></td>
 						<td><a href="/delete?id=${user.id}" class="btn btn-danger">Delete</a></td>
 					</tr>
 				</c:forEach>

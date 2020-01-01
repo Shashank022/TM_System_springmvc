@@ -1,8 +1,16 @@
 package com.springmvc.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class User {
 	
+	@Id
+	@GeneratedValue
 	private int id;
+	
 	private String user_id;
 	private String user_name;
 	private int user_role;

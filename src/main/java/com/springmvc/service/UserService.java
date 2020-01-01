@@ -18,7 +18,9 @@ public class UserService {
 	public List<User> getallUserList() {
 		return userDao.getallUserList();
 	}
-	/*
-	 * public void saveEvent(Event event) { userDao.saveEvent(event); }
-	 */
+	
+	public User findBySSO(String sso) {
+		return userDao.findBySSO(sso);
+	}
+
 }

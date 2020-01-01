@@ -1,4 +1,4 @@
-package com.springmvc.login;
+package com.springmvc.controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

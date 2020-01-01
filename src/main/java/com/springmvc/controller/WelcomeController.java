@@ -1,8 +1,5 @@
-package com.springmvc.login;
+package com.springmvc.controller;
 
-import org.springframework.context.ApplicationContext;
-import org.springframework.jca.context.SpringContextResourceAdapter;
-import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;

@@ -2,7 +2,6 @@
 package com.springmvc.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -32,6 +31,23 @@ public class UserController {
 		 model.addAttribute("event", new Event()); 
 		return "addevent";
 	}
+	
+//	@RequestMapping(value = "/update-", method = RequestMethod.GET)
+//	public String updateTodo(@RequestParam int id, ModelMap model) {
+//		//Todo todo = userService.retrieveTodo(id);
+//		model.addAttribute("todo",todo);
+//
+//		return "todo";
+//	}
+//	
+//	@RequestMapping(value = "/update-todo", method = RequestMethod.POST)
+//	public String updateSubmitTodo(@Valid Todo todo, BindingResult result) {
+//		if(result.hasErrors()) {
+//			return "todo";
+//		}
+//		//userService.updateTodo(todo);
+//		return "redirect:list-todos";
+//	}
 
 	/*
 	 * @RequestMapping(value = "/adduser", method = RequestMethod.POST) public

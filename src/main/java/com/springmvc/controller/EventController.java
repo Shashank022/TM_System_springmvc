@@ -3,7 +3,6 @@ package com.springmvc.controller;
 
 import javax.validation.Valid;
 
-import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
@@ -22,7 +21,6 @@ public class EventController {
 
 	@Autowired
 	EventService eventService;
-	
 //	
 //	@InitBinder
 //	protected void initBinder(WebDataBinder binder) {
