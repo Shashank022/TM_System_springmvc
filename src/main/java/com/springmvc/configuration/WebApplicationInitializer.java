@@ -20,8 +20,10 @@ public class WebApplicationInitializer implements org.springframework.web.WebApp
 		AnnotationConfigWebApplicationContext springContext = new AnnotationConfigWebApplicationContext();
 
 		// Register Spring Configurations
+		
 		springContext.register(MvcConfig.class);//loads all the imp beans config
 		springContext.register(PersistenceConfig.class);//Db related datasource, hibernate sessions config
+		springContext.register(WebSecurityConfig.class);//Configuration related to the Web Authentication
 
 		// Spring MVC dispatcher servlet configuration
 		servletContext.addListener(new ContextLoaderListener(springContext));

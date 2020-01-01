@@ -13,9 +13,8 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 
 @Configuration
 @EnableWebSecurity
-@ComponentScan(basePackages= {"com.learn.*.*"})
+@ComponentScan(basePackages= {"com.learn.*", "com.learn.*.*"})
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
-
 
 	@Autowired
 	 DataSource dataSource;
@@ -25,7 +24,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	auth.inMemoryAuthentication().withUser("shashank").password("password").roles("USER", "ADMIN")
 	.and().withUser("admin").password("password").roles("USER","ADMIN")
 	.and().withUser("user").password("password").roles("USER");
-	
 	}
  
 	@Override
