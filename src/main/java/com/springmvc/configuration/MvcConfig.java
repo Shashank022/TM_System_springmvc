@@ -24,11 +24,5 @@ public class MvcConfig extends WebMvcConfigurerAdapter{
         registry.viewResolver(resolver);
     }
 
-	 @Override
-	    public void configureDefaultServletHandling(
-	            DefaultServletHandlerConfigurer configurer) {
-	        configurer.enable();
-	    }
-
 
 }

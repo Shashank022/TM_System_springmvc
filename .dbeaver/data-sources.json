@@ -1,0 +1,31 @@
+{
+	"folders": {},
+	"connections": {
+		"mariaDB-16f5d00a99f-1760e5d736e6586e": {
+			"provider": "mysql",
+			"driver": "mariaDB",
+			"name": "MariaDB - TMSystem",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"host": "localhost",
+				"port": "3306",
+				"database": "jdbc:mysql://172.17.0.2:3306/TMSystem",
+				"url": "jdbc:mysql://localhost:3306/jdbc:mysql://172.17.0.2:3306/TMSystem",
+				"home": "/usr",
+				"type": "dev",
+				"handlers": {}
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false
+		}
+	}
+}

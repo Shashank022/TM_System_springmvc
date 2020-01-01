@@ -5,10 +5,11 @@
 	</div>
 	<div class="navbar-collapse">
 		<ul class="nav navbar-nav">
-			<li><a href="/admin">Admin</a></li>
+			<li><a href="/admin">Admin</a></li> <!-- <sec:authorize access="hasRole('ADMIN')"><a href="/admin">Admin</a></sec:authorize> -->
 			<li><a href="/list-todos">Todos</a></li>
 			<li><a href="/eventlist">Events</a></li>
 			<li><a href="/userlist">Users</a></li>
+			<li><a href="/tasklist">Tasks</a></li>
 
 		</ul>
 		<ul class="nav navbar-right">
