@@ -2,8 +2,17 @@ package com.springmvc.model;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+
+
+@Entity
 public class Task {
 
+	@Id
+	@GeneratedValue
 	private int id;
 	private String task_name;
 	private String task_created_by;
