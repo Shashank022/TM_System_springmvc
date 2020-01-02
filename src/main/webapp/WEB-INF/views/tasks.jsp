@@ -17,11 +17,11 @@
 			<tbody>
 				<c:forEach items="${tasks}" var="task">
 					<tr>
-						<td>${task.team_name}</td>
+						<td>${task.task_name}</td>
 						<td>${task.task_created}</td>
 						<td>${task.task_updated}</td>
-						<td><a href="/update-event?id=${task.id}" class="btn btn-success">Update</a></td>
-						<td><a href="/delete-event?id=${task.id}" class="btn btn-danger">Delete</a></td>
+						<td><a href="/update-event?id=${task.task_id}" class="btn btn-success">Update</a></td>
+						<td><a href="/delete-event?id=${task.task_id}" class="btn btn-danger">Delete</a></td>
 					</tr>
 				</c:forEach>
 			</tbody>

@@ -8,7 +8,7 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(schema = "TMSystem",name = "tasks")
+@Table(name = "tasks")
 public class Task {
 
 	@Id
