@@ -3,14 +3,15 @@ package com.springmvc.daoImpl;
 
 import java.util.List;
 
+import org.hibernate.Criteria;
+import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.springmvc.dao.TaskDao;
-import com.springmvc.dao.UserDao;
 import com.springmvc.model.Task;
 
 @Repository
@@ -18,6 +19,9 @@ public class TaskDaoImpl implements TaskDao {
 
 	@Autowired
 	JdbcTemplate jdbcTemplate;
+	
+	@Autowired
+	SessionFactory sessionfactory;
 
 	
 	@Override
@@ -25,6 +29,18 @@ public class TaskDaoImpl implements TaskDao {
 		
 		String SQL = "SELECT * FROM TMSystem.users";
 		List<Task> tasks = jdbcTemplate.query(SQL, new BeanPropertyRowMapper<Task>(Task.class));
+		return tasks;
+	}
+
+
+	@Override
+	@Transactional
+	public List<Task> getListofTasks() {
+
+		Criteria crit = sessionfactory.getCurrentSession().createCriteria(Task.class);
+		
+		List<Task> tasks = crit.list();
+		
 		return tasks;
 	}
 
