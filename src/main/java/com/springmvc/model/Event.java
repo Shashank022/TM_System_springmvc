@@ -3,8 +3,17 @@ package com.springmvc.model;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "events")
 public class Event {
 
+	@Id
+	@GeneratedValue
 	private int id;
 	private String event_name;
 	private String created_by;

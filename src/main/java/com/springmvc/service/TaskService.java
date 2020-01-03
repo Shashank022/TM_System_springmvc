@@ -20,7 +20,6 @@ public class TaskService {
 	
 	public List<Task> getListofTasks() {
 		System.out.println("Well we are here");
-		//return taskJPARepository.getListofTasks();
 		return taskDao.getListofTasks();
 	}
 

@@ -36,11 +36,8 @@ public class TaskDaoImpl implements TaskDao {
 	@Override
 	@Transactional
 	public List<Task> getListofTasks() {
-
 		Criteria crit = sessionfactory.getCurrentSession().createCriteria(Task.class);
-		
 		List<Task> tasks = crit.list();
-		
 		return tasks;
 	}
 
