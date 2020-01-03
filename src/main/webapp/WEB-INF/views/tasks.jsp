@@ -4,7 +4,7 @@
 <div class="container">
 
 		<table class="table table-striped">
-			<caption>Your List of Events are</caption>
+			<caption>Your List of Tasks are</caption>
 
 			<thead>
 				<tr>
