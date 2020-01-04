@@ -41,14 +41,13 @@ public class EventDaoImpl implements EventDao{
  	@Override
  	@Transactional
  	public void saveEvent(Event event) {
- 		Session session = hibernateUtil.getSessionFactory().openSession();
- 		session.saveOrUpdate(event);
- 		sessionFactory.close();
- 		
- 		
-// 		jdbcTemplate.update("INSERT INTO TMSystem.events (event_name, created_by, created_date, updated_by, team_id)"
-// 				+ " VALUES (?, ?, ?, ? , ?)", event.getEvent_name(), event.getCreated_by(),event.getCreated_date(), event.getUpdated_by(), event.getTeam_id());
-// 		System.out.println("I have reached here");		
+		/*
+		 * Session session = hibernateUtil.getSessionFactory().openSession();
+		 * session.saveOrUpdate(event); sessionFactory.close();
+		 */ 		
+ 		jdbcTemplate.update("INSERT INTO TMSystem.events (event_name, created_by, created_date, updated_by, team_id)"
+ 				+ " VALUES (?, ?, ?, ? , ?)", event.getEvent_name(), event.getCreated_by(),event.getCreated_date(), event.getUpdated_by(), event.getTeam_id());
+ 		System.out.println("I have reached here");		
  	}
  
  	@Override
