@@ -12,7 +12,6 @@ public class EventService {
 	
 	@Autowired
 	EventDao eventDao;
-
  
 	public List<Event> getListofEvents() {
 		return eventDao.getallEventsList();
@@ -21,5 +20,16 @@ public class EventService {
 	public void saveEvent(Event event) {
 		eventDao.saveEvent(event);
 	}
-
+	
+	public Event getEventDetails(int id) {
+		return eventDao.getEventDetails(id);
+	}
+	
+	public void updateEvent(Event event) {
+		eventDao.updateEvent(event);
+	}
+	
+	public void deleteEvent(int id) {
+		eventDao.deleteEvent(id);
+	}
 }

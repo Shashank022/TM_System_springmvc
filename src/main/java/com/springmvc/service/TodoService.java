@@ -21,6 +21,10 @@ public class TodoService {
 		todos.add(new Todo(4, "shashank", "Learn Spring boot", new Date(), false));
 		todos.add(new Todo(5, "shashank", "Learn Spring Frame Work", new Date(),false));
 		todos.add(new Todo(6, "shashank", "Learn Hibernate", new Date(), false));
+		
+		todos.add(new Todo(7, "admin", "Learn Spring boot", new Date(), false));
+		todos.add(new Todo(8, "admin", "Learn Spring Frame Work", new Date(),false));
+		todos.add(new Todo(9, "admin", "Learn Hibernate", new Date(), false));
 
 	}
 

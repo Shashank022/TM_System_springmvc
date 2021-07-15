@@ -3,7 +3,6 @@ package com.springmvc.controller;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import javax.sql.DataSource;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,10 +27,7 @@ public class TodoController {
 
 	@Autowired
 	TodoService service;
-	
-	@Autowired
-	DataSource dataSource;
-	
+
 	@Autowired
 	JdbcTemplate jdbcTemplate;
 	
